@@ -1,0 +1,16 @@
+# Minimal settings to update dependencies in one private registry
+
+version: 2
+registries:
+  github: # Define access for a private registry
+    type: git
+    url: https://github.com
+    username: x-acess-token
+    key: ${{secrets.MY_GITHUB_PERSONAL_TOKEN}}
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    registries:
+      - github # Allow version updates for dependencies in this registry
+    schedule:
+      interval: "monthly"

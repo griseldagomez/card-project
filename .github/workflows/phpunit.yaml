@@ -1,0 +1,83 @@
+name: PHPUnit
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+
+permissions:
+    contents: read
+
+jobs:
+    phpunit:
+
+        runs-on: ubuntu-latest
+
+        strategy:
+          matrix:
+              node-version: [20.x]
+
+        steps:
+        - uses: actions/checkout@v3
+
+        - uses: shivammathur/setup-php@v2
+          with:
+              php-version: '8.2'
+
+        - uses: webfactory/ssh-agent@v0.8.0
+          with:
+              ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+        - name: Set the Environment APP_ENV=test
+          run: echo 'APP_ENV=test' >> $GITHUB_ENV
+
+        - name: Validate composer.json and composer.lock
+          run: composer validate --strict
+
+        - name: Cache Composer packages
+          id: composer-cache
+          uses: actions/cache@v3
+          with:
+              path: vendor
+              key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+              restore-keys: |
+                ${{ runner.os }}-php-
+
+        - name: Install dependencies
+          run: composer install --prefer-dist --no-progress
+
+        - name: Install symfony-cli
+          run: wget https://get.symfony.com/cli/installer -O - | bash
+
+        - name: Copy symfony binary file
+          run: sudo mv ~/.symfony5/bin/symfony /usr/local/bin/symfony
+
+        - name: Install CA Certificate
+          run: symfony server:ca:install
+
+        - name: Setup Docker and Symfony server
+          run: php ./bin/docker up test
+
+        - name: Run npm
+          run: npm install
+
+        - name: Run Assets Compile
+          run: npm run build && php bin/console asset-map:compile
+
+        - name: Run PHPUnit
+          run: ./bin/phpunit
+
+        - name: Upload the browser artifacts
+          uses: actions/upload-artifact@v2
+          if: failure()
+          with:
+            name: browser-artifacts
+            path: ./var/error-screenshots
+
+        - name: Upload the log artifacts
+          uses: actions/upload-artifact@v2
+          if: failure()
+          with:
+            name: log-artifacts
+            path: ./var/log

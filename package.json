@@ -1,0 +1,40 @@
+{
+  "name": "shaun-mccoy.com",
+  "version": "1.0.0",
+  "description": "Shaun McCoy Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint",
+    "build": "node ./esbuild.mjs && ./node_modules/.bin/tsc --project ./assets/tsconfig.json",
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shadowc/shaun-mccoy.git"
+  },
+  "author": "Matias Jose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadowc/shaun-mccoy/issues"
+  },
+  "homepage": "https://github.com/shadowc/shaun-mccoy#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@hotwired/stimulus": "^3.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "esbuild": "^0.24.0",
+    "esbuild-copy-files-plugin": "^1.2.0",
+    "esbuild-plugin-clean": "^1.0.1",
+    "esbuild-sass-plugin": "^3.3.1",
+    "eslint": "^9.12.0",
+    "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.10.0",
+    "prettier": "3.3.3",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}

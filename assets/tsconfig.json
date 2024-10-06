@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "ES2020",
+        "target": "ES2020",
+        "allowJs": false,
+        "moduleResolution": "node",
+        "declaration": false,
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "baseUrl": "./",
+        "outDir": "./controllers",
+        "paths": {
+            "@styles/*": ["scss/*"]
+        }
+    },
+    "include": ["./typescript-controllers/**/*.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

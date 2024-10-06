@@ -1,0 +1,59 @@
+#! /usr/bin/sh
+
+echo '-------------- Performing Tests -----------\n'
+
+echo '-------------- ESLint ---------------------\n'
+
+npm run lint
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+echo '-------------- lint:twig -----------------\n'
+
+./bin/console lint:twig ./templates @AdminBundle
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+echo '-------------- lint:yaml -----------------\n'
+
+./bin/console lint:yaml ./config ./vendor/shadowc/adminbundle/config
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+echo '-------------- PHPCSFixer ----------------\n'
+
+./bin/phpcsfixer
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+echo '\n-------------- PHPStan ----------------\n'
+
+./bin/phpstan
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+echo '\n-------------- PHPUnit ---------------\n'
+
+./bin/phpunit
+
+if [ $? != 0 ]
+then
+  return $?
+fi
+
+return 0

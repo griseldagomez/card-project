@@ -1,0 +1,17 @@
+parameters:
+    level: 9
+    paths:
+        - bin/
+        - config/
+        - public/
+        - src/
+        - tests/
+    inferPrivatePropertyTypeFromConstructor: true
+    checkGenericClassInNonGenericObjectType: false
+#    ignoreErrors:
+#        -
+#           message: '#Property [a-zA-Z0-9\\_]+::\$id is never written, only read.#'
+#           path: src/Entity/*
+#        - 
+#           message: "#Unreachable statement - code above always terminates.#"
+#           path: tests
