@@ -43,8 +43,17 @@
     "symfony/asset-mapper": {
         "version": "7.1",
         "recipe": {
-            "version": "6.4"
-        }
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.4",
+            "ref": "6c28c471640cc2c6e60812ebcb961c526ef8997f"
+        },
+        "files": [
+            "assets/app.js",
+            "assets/styles/app.css",
+            "config/packages/asset_mapper.yaml",
+            "importmap.php"
+        ]
     },
     "symfony/console": {
         "version": "7.1",
@@ -59,7 +68,16 @@
         ]
     },
     "symfony/debug-bundle": {
-        "version": "v7.1.1"
+        "version": "7.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.3",
+            "ref": "5aa8aa48234c8eb6dbdd7b3cd5d791485d2cec4b"
+        },
+        "files": [
+            "config/packages/debug.yaml"
+        ]
     },
     "symfony/flex": {
         "version": "2.4",
@@ -164,7 +182,18 @@
         ]
     },
     "symfony/stimulus-bundle": {
-        "version": "v2.20.0"
+        "version": "2.20",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.13",
+            "ref": "6acd9ff4f7fd5626d2962109bd4ebab351d43c43"
+        },
+        "files": [
+            "assets/bootstrap.js",
+            "assets/controllers.json",
+            "assets/controllers/hello_controller.js"
+        ]
     },
     "symfony/translation": {
         "version": "7.1",
