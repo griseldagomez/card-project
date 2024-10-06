@@ -113,8 +113,14 @@
     "symfony/mailer": {
         "version": "7.1",
         "recipe": {
-            "version": "4.3"
-        }
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.3",
+            "ref": "df66ee1f226c46f01e85c29c2f7acce0596ba35a"
+        },
+        "files": [
+            "config/packages/mailer.yaml"
+        ]
     },
     "symfony/maker-bundle": {
         "version": "1.61",
@@ -128,17 +134,38 @@
     "symfony/messenger": {
         "version": "7.1",
         "recipe": {
-            "version": "6.0"
-        }
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.0",
+            "ref": "ba1ac4e919baba5644d31b57a3284d6ba12d52ee"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
     },
     "symfony/monolog-bundle": {
-        "version": "v3.10.0"
+        "version": "3.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.7",
+            "ref": "aff23899c4440dd995907613c1dd709b6f59503f"
+        },
+        "files": [
+            "config/packages/monolog.yaml"
+        ]
     },
     "symfony/notifier": {
         "version": "7.1",
         "recipe": {
-            "version": "5.0"
-        }
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.0",
+            "ref": "178877daf79d2dbd62129dd03612cb1a2cb407cc"
+        },
+        "files": [
+            "config/packages/notifier.yaml"
+        ]
     },
     "symfony/phpunit-bridge": {
         "version": "7.1",
@@ -198,8 +225,15 @@
     "symfony/translation": {
         "version": "7.1",
         "recipe": {
-            "version": "6.3"
-        }
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.3",
+            "ref": "e28e27f53663cc34f0be2837aba18e3a1bef8e7b"
+        },
+        "files": [
+            "config/packages/translation.yaml",
+            "translations/.gitignore"
+        ]
     },
     "symfony/twig-bundle": {
         "version": "7.1",
@@ -230,7 +264,17 @@
         ]
     },
     "symfony/web-profiler-bundle": {
-        "version": "v7.1.4"
+        "version": "7.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "6.1",
+            "ref": "e42b3f0177df239add25373083a564e5ead4e13a"
+        },
+        "files": [
+            "config/packages/web_profiler.yaml",
+            "config/routes/web_profiler.yaml"
+        ]
     },
     "twig/extra-bundle": {
         "version": "v3.13.0"
