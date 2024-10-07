@@ -1,6 +1,14 @@
 # Card Project
 
 ![Version](https://img.shields.io/badge/version-1.0.0-informational)
+[![Build Front](https://github.com/shadowc/card-project/actions/workflows/build.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+[![PHPCSFixer](https://github.com/shadowc/card-project/actions/workflows/php-cs-fixer.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+[![PHPStan](https://github.com/shadowc/card-project/actions/workflows/phpstan.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+[![PHPUnit](https://github.com/shadowc/card-project/actions/workflows/phpunit.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+
+[![Lint](https://github.com/shadowc/card-project/actions/workflows/lint.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+[![Lint Twig](https://github.com/shadowc/card-project/actions/workflows/lint-twig.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
+[![Lint Yaml](https://github.com/shadowc/card-project/actions/workflows/lint-yaml.yaml/badge.svg)](https://github.com/shadowc/card-project/actions)
 
 Card project website based on bootcamp project
 
@@ -8,7 +16,7 @@ Card project website based on bootcamp project
 
 - PHP 8.3
 - Symfony 7.1
-- MariaDB 10.3
+- PostgreSQL 16
 - Nodejs 20
 
 ## Setup
