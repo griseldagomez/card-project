@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "21e0e05301eac54366f6d286d92fa4b6",
+    "content-hash": "5465ecdc8252030425d582fdf81d60c8",
     "packages": [
         {
             "name": "composer/semver",
@@ -2009,11 +2009,17 @@
         },
         {
             "name": "shadowc/adminbundle",
-            "version": "7.1.x-dev",
+            "version": "v7.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:shadowc/AdminBundle.git",
+                "reference": "be349b57aa1046ae5d03d363a743fda634bfdc5f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../AdminBundle",
-                "reference": "2427a7da387004043d037028afd0da65bc6e9f3b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/shadowc/AdminBundle/zipball/be349b57aa1046ae5d03d363a743fda634bfdc5f",
+                "reference": "be349b57aa1046ae5d03d363a743fda634bfdc5f",
+                "shasum": ""
             },
             "require": {
                 "php": ">=8.3",
@@ -2056,9 +2062,11 @@
                 }
             ],
             "description": "An extensible and powerful bundle with tools to create admin panels in Symfony",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/shadowc/AdminBundle/tree/v7.1.0",
+                "issues": "https://github.com/shadowc/AdminBundle/issues"
+            },
+            "time": "2024-10-07T00:09:31+00:00"
         },
         {
             "name": "symfony/asset",
@@ -10938,9 +10946,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "shadowc/adminbundle": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
