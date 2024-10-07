@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f513546e742398d822ba4c90f99d25e",
+    "content-hash": "21e0e05301eac54366f6d286d92fa4b6",
     "packages": [
         {
             "name": "composer/semver",
@@ -2006,6 +2006,59 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
+        },
+        {
+            "name": "shadowc/adminbundle",
+            "version": "7.1.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "../AdminBundle",
+                "reference": "2427a7da387004043d037028afd0da65bc6e9f3b"
+            },
+            "require": {
+                "php": ">=8.3",
+                "symfony/asset": "7.1.*",
+                "symfony/config": "7.1.*",
+                "symfony/dependency-injection": "7.1.*",
+                "symfony/form": "7.1.*",
+                "symfony/framework-bundle": "7.1.*",
+                "symfony/http-kernel": "7.1.*",
+                "symfony/orm-pack": "^2.4",
+                "symfony/security-bundle": "7.1.*",
+                "symfony/translation": "7.1.*",
+                "symfony/yaml": "7.1.*",
+                "twig/twig": "^3.14"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "phpstan/phpstan": "^1.12.6",
+                "symfony/maker-bundle": "^1.61",
+                "symfony/phpunit-bridge": "7.1.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "ShadowC\\AdminBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "ShadowC\\AdminBundle\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shadowc",
+                    "email": "info@matiasjose.com"
+                }
+            ],
+            "description": "An extensible and powerful bundle with tools to create admin panels in Symfony",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/asset",
@@ -4707,6 +4760,55 @@
                 }
             ],
             "time": "2024-05-31T14:57:53+00:00"
+        },
+        {
+            "name": "symfony/orm-pack",
+            "version": "v2.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/orm-pack.git",
+                "reference": "9d8729016b3a8b0db854c028d15c2dcf4d19b1b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/9d8729016b3a8b0db854c028d15c2dcf4d19b1b4",
+                "reference": "9d8729016b3a8b0db854c028d15c2dcf4d19b1b4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3",
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/doctrine-migrations-bundle": "*",
+                "doctrine/orm": "*"
+            },
+            "conflict": {
+                "php": "<8.1"
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for the Doctrine ORM",
+            "support": {
+                "issues": "https://github.com/symfony/orm-pack/issues",
+                "source": "https://github.com/symfony/orm-pack/tree/v2.4.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-02-13T17:58:44+00:00"
         },
         {
             "name": "symfony/password-hasher",
@@ -10836,7 +10938,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "shadowc/adminbundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -10844,6 +10948,6 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

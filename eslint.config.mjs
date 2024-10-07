@@ -7,7 +7,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default [
     {
-        files: ['assets/**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+        files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     },
     {
         ignores: [

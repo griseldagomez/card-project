@@ -1,0 +1,20 @@
+framework:
+    assets:
+        packages:
+            sc_admin:
+                json_manifest_path: '%kernel.project_dir%/public/bundles/admin/manifest.json'
+
+admin:
+    main_asset_mapper_entry: admin
+    favicon_entry: 'images/favicon.png'
+    favicon_type: 'image/png'
+    storage:
+        # The storage driver to use. It can be none, filesystem or dsn
+        driver: 'none'
+        public_path: /public/storage
+        public_url: /storage
+        private_path: /assets/storage
+        # Json string with storage metadata needed to log in to the dsn storage
+        storage_metadata: ''
+        # Weather to allow for gallery management under public storage
+        # allow_galleries: true

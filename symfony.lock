@@ -64,6 +64,9 @@
             "tests/bootstrap.php"
         ]
     },
+    "shadowc/adminbundle": {
+        "version": "7.1.x-dev"
+    },
     "symfony/asset-mapper": {
         "version": "7.1",
         "recipe": {

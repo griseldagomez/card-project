@@ -38,9 +38,9 @@ Add a file named `.env.local` with the correct database and mailer configuration
 Create the database schema and populate it with fixtures if you are local
 
 ```bash
-symfony php ./bin/console doctrine:database:create
-symfony php ./bin/console doctrine:schema:create
-symfony php ./bin/console doctrine:fixtures:load
+symfony console doctrine:database:create
+symfony console doctrine:schema:create
+symfony console doctrine:fixtures:load
 ```
 
 ### Build local front-end files (to be used by asset mapper)
@@ -55,8 +55,8 @@ Create the test database environment
 
 ```bash
 ./bin/docker up test
-symfony php ./bin/console doctrine:database:create
-symfony php ./bin/console doctrine:schema:create
+symfony console doctrine:database:create
+symfony console doctrine:schema:create
 ```
 
 The run the tests
