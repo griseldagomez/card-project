@@ -1,21 +1,18 @@
 name: PHP-CS-Fixer
 
 on:
-    workflow_run:
-        workflows:
-            - "lint-twig"
-            - "lint-yaml"
-        types: ["completed"]
-        branches: ["*"]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 permissions:
     contents: read
 
 jobs:
     phpcsfixer:
-
         runs-on: ubuntu-latest
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        needs: ['lint-twig', 'lint-yaml']
 
         steps:
         - uses: actions/checkout@v3

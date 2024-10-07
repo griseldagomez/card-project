@@ -1,16 +1,15 @@
 name: Build
 
 on:
-    workflow_run:
-        workflows:
-            - "lint"
-        types: ["completed"]
-        branches: ["*"]
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
 
 jobs:
     build:
+        needs: ['lint']
         runs-on: ubuntu-latest
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
         strategy:
             matrix:
