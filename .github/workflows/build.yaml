@@ -3,7 +3,7 @@ name: Build
 on:
     workflow_run:
         workflows:
-            - "build"
+            - "lint"
         types: ["completed"]
         branches: ["*"]
 
