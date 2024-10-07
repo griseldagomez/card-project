@@ -16,7 +16,7 @@
         "outDir": "./controllers",
         "paths": {
             "@styles/*": ["scss/*"]
-        }
+        },
     },
     "include": ["./typescript-controllers/**/*.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"]
