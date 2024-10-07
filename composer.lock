@@ -2009,16 +2009,16 @@
         },
         {
             "name": "shadowc/adminbundle",
-            "version": "v7.1.0",
+            "version": "v7.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:shadowc/AdminBundle.git",
-                "reference": "be349b57aa1046ae5d03d363a743fda634bfdc5f"
+                "reference": "31327a313139b9ab6fe5b31216c5de629d0865de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shadowc/AdminBundle/zipball/be349b57aa1046ae5d03d363a743fda634bfdc5f",
-                "reference": "be349b57aa1046ae5d03d363a743fda634bfdc5f",
+                "url": "https://api.github.com/repos/shadowc/AdminBundle/zipball/31327a313139b9ab6fe5b31216c5de629d0865de",
+                "reference": "31327a313139b9ab6fe5b31216c5de629d0865de",
                 "shasum": ""
             },
             "require": {
@@ -2063,10 +2063,10 @@
             ],
             "description": "An extensible and powerful bundle with tools to create admin panels in Symfony",
             "support": {
-                "source": "https://github.com/shadowc/AdminBundle/tree/v7.1.0",
+                "source": "https://github.com/shadowc/AdminBundle/tree/v7.1.1",
                 "issues": "https://github.com/shadowc/AdminBundle/issues"
             },
-            "time": "2024-10-07T00:09:31+00:00"
+            "time": "2024-10-07T23:12:17+00:00"
         },
         {
             "name": "symfony/asset",
