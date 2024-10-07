@@ -9,3 +9,4 @@ admin_controllers:
         path: ../src/Admin/Controller
         namespace: App\Admin\Controller
     type: attribute
+    prefix: '%sc_admin_base_route%'

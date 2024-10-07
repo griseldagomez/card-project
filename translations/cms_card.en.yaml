@@ -1,1 +1,12 @@
 # Add the translation phrases for your Resource here!
+field.name: Name
+field.job: Job
+
+form.name.label: Name
+form.job.label: Job
+form.phone.label: Phone
+form.email.label: Email
+form.colorScheme.label: Color Palette
+form.githubUrl.label: Github Url
+form.linkedinUrl.label: Linkedin Url
+form.photo.label: Photo
