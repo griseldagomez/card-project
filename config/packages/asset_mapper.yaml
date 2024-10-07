@@ -4,3 +4,7 @@ framework:
         paths:
             - assets/
             - vendor/shadowc/adminbundle/assets/dist/
+        excluded_patterns:
+            - '*/assets/scss/*.scss'
+            - '*/assets/typescript-controllers/*.ts'
+            - '*/assets/react/*.tsx'
