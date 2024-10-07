@@ -76,7 +76,7 @@ jobs:
             path: ./var/error-screenshots
 
         - name: Upload the log artifacts
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v4
           if: failure()
           with:
             name: log-artifacts
