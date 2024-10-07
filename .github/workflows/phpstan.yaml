@@ -3,11 +3,10 @@ name: PHPStan
 on:
     workflow_run:
         workflows:
-            - lint-twig
-            - lint-yaml
-        types:
-            - completed
-
+            - "lint-twig"
+            - "lint-yaml"
+        types: ["completed"]
+        branches: ["main"]
 permissions:
     contents: read
 

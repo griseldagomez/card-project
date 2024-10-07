@@ -3,11 +3,11 @@ name: PHPUnit
 on:
     workflow_run:
         workflows:
-            - build
-            - phpstan
-            - php-cs-fixer
-        types:
-            - completed
+            - "build"
+            - "phpstan"
+            - "php-cs-fixer"
+        types: ["completed"]
+        branches: ["main"]
 
 permissions:
     contents: read
