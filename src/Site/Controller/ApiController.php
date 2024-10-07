@@ -2,6 +2,7 @@
 
 namespace App\Site\Controller;
 
+use App\Entity\Card;
 use App\Site\Service\CardService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -22,7 +23,7 @@ class ApiController extends AbstractController
 
             return new JsonResponse([
                 'success' => true,
-                'results' => $cards,
+                'results' => array_map(function ($card) { return $this->serializeCard($card); }, $cards),
             ]);
         } catch (\Throwable $e) {
             return new JsonResponse([
@@ -47,7 +48,7 @@ class ApiController extends AbstractController
 
             return new JsonResponse([
                 'success' => true,
-                'results' => $card,
+                'results' => $this->serializeCard($card),
             ]);
         } catch (\Throwable $e) {
             return new JsonResponse([
@@ -156,5 +157,23 @@ class ApiController extends AbstractController
         }
 
         return null;
+    }
+
+    /**
+     * @return array{id: int, name:string, job: string, colorScheme: string, email: string, phone: string, photo: string, linkedinUrl: string, githubUrl: string}
+     */
+    private function serializeCard(Card $card): array
+    {
+        return [
+            'id' => (int) $card->getId(),
+            'name' => (string) $card->getName(),
+            'job' => (string) $card->getJob(),
+            'colorScheme' => (string) $card->getColorScheme(),
+            'email' => (string) $card->getEmail(),
+            'phone' => (string) $card->getPhone(),
+            'photo' => (string) $card->getPhoto(),
+            'linkedinUrl' => (string) $card->getLinkedinUrl(),
+            'githubUrl' => (string) $card->getGithubUrl(),
+        ];
     }
 }
