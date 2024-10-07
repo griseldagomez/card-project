@@ -14,10 +14,19 @@ export default [
             'vendor/**/*.{js,ts,mjs,cjs,jsx,tsx}',
             'assets/vendor/**/*.js',
             'assets/controllers/**/*.js',
+            'assets/dist/**/*.js',
         ],
     },
     {
+        settings: {
+            react: {
+                version: '18',
+            },
+        },
+    },
+    {
         languageOptions: {
+            ...pluginReact.configs.flat.recommended.languageOptions,
             globals: {
                 ...globals.browser,
                 ...globals.node,
@@ -29,4 +38,9 @@ export default [
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
+    {
+        rules: {
+            'react/react-in-jsx-scope': ['off'],
+        },
+    },
 ];
