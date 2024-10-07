@@ -1,4 +1,6 @@
 {
+    "name": "shadowc/card-project",
+    "description": "Card Project Website",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
