@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
-    "build": "node ./esbuild.mjs && ./node_modules/.bin/tsc --project ./assets/tsconfig.json",
+    "build": "node ./esbuild.mjs",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {

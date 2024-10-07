@@ -20,7 +20,7 @@ await build({
     assetNames: '[dir]/[name]',
     plugins: [
         clean({
-            patterns: ['./assets/styles/*', './assets/controllers/*'],
+            patterns: ['./assets/styles/*'],
         }),
         // {
         //     name: 'resolveImages',
