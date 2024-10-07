@@ -29,7 +29,12 @@ readonly class CardService
         return $this->repository->findOneBy(['id' => $id]);
     }
 
-    public function create(array $card): int
+    /**
+     * @param string[] $card
+     *
+     * @throws \Exception
+     */
+    public function create(array $card): ?int
     {
         $cardEntity = new Card();
         $cardEntity

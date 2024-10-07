@@ -61,7 +61,8 @@ class ApiController extends AbstractController
     public function create(Request $request): JsonResponse
     {
         try {
-            $card = json_decode($request->getContent());
+            /** @var string[] $card */
+            $card = json_decode($request->getContent(), true);
 
             $message = $this->checkRequestFormat($card);
             if (null !== $message) {
@@ -85,6 +86,9 @@ class ApiController extends AbstractController
         }
     }
 
+    /**
+     * @param string[] $card
+     */
     private function checkRequestFormat(array $card): ?string
     {
         if (!array_key_exists('email', $card)) {
