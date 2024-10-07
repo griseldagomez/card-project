@@ -16,7 +16,7 @@ Card project website based on bootcamp project
 
 - PHP 8.3
 - Symfony 7.1
-- PostgreSQL 16
+- MariaDB 10.5
 - Nodejs 20
 
 ## Setup
