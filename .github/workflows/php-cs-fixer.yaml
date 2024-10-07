@@ -6,7 +6,7 @@ on:
             - "lint-twig"
             - "lint-yaml"
         types: ["completed"]
-        branches: ["main"]
+        branches: ["*"]
 
 permissions:
     contents: read
