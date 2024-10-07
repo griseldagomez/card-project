@@ -1,8 +1,8 @@
-# Shaun-McCoy.com
+# Card Project
 
 ![Version](https://img.shields.io/badge/version-1.0.0-informational)
 
-Personal Website
+Card project website based on bootcamp project
 
 ## Requirements
 

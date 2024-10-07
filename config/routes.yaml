@@ -1,5 +1,11 @@
 controllers:
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+        path: ../src/Site/Controller
+        namespace: App\Site\Controller
+    type: attribute
+
+admin_controllers:
+    resource:
+        path: ../src/Admin/Controller
+        namespace: App\Admin\Controller
     type: attribute

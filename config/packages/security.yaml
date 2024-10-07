@@ -41,6 +41,14 @@ security:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
+    role_hierarchy:
+        ROLE_SC_ADMIN_USER:
+            - ROLE_APP_CARD
+        ROLE_APP_CARD:
+            - ROLE_APP_CARD_CREATE
+            - ROLE_APP_CARD_EDIT
+            - ROLE_APP_CARD_DELETE
+
 when@test:
     security:
         password_hashers:
