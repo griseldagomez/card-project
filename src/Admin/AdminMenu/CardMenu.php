@@ -7,7 +7,6 @@ use ShadowC\AdminBundle\Library\AdminMenu\AdminMenuItem;
 
 class CardMenu implements AdminMenuInterface
 {
-
     public function getLabel(): ?string
     {
         return 'Cards';
