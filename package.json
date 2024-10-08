@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
-    "build": "node ./esbuild-css.mjs && node ./esbuild-react.mjs",
+    "build": "node ./esbuild-css.mjs && tsc --project assets/tsconfig-react.json --noEmit && node ./esbuild-react.mjs",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
