@@ -54,6 +54,7 @@ symfony console doctrine:fixtures:load
 ### Build local front-end files (to be used by asset mapper)
 
 ```bash
+npm install
 npm run build
 ```
 
