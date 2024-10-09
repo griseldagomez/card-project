@@ -48,7 +48,6 @@ Create the database schema and populate it with fixtures if you are local
 ```bash
 symfony console doctrine:database:create
 symfony console doctrine:schema:create
-symfony console doctrine:fixtures:load
 ```
 
 ### Build local front-end files (to be used by asset mapper)
