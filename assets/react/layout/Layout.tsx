@@ -1,6 +1,9 @@
-/* eslint-disable */
-// @ts-ignore TS7031
-export function Layout({ children }) {
+import React from 'react';
+
+interface LayoutPropTypes {
+    children: React.ReactElement;
+}
+export function Layout({ children }: LayoutPropTypes) {
     return (
         <>
             <h1>Header</h1>

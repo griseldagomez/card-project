@@ -1,11 +1,11 @@
 {
-  "name": "shaun-mccoy.com",
+  "name": "card-project",
   "version": "1.0.0",
-  "description": "Shaun McCoy Site",
+  "description": "Card Project Site",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
-    "build": "node ./esbuild-css.mjs && tsc --project assets/tsconfig-react.json --noEmit && node ./esbuild-react.mjs",
+    "build": "node ./esbuild-css.mjs && tsc --project tsconfig.json --noEmit && node ./esbuild-react.mjs",
     "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
