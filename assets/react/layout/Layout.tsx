@@ -3,6 +3,7 @@ import React from 'react';
 interface LayoutPropTypes {
     children: React.ReactElement;
 }
+
 export function Layout({ children }: LayoutPropTypes) {
     return (
         <>
