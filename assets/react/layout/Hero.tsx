@@ -1,20 +1,23 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, useMediaQuery } from '@chakra-ui/react';
 
 function Hero() {
+    const [mobile] = useMediaQuery('(max-width: 720px)');
+
     return (
-        <Box>
+        <Box >
             <Box
                 display="inline"
                 textAlign="center"
-                fontSize="30px"
                 fontWeight="extrabold"
                 textColor="black"
-                fontFamily="Fira Sans, sans-serif"
+                fontFamily="Roboto"
                 fontStyle="normal"
-                padding="30px"
+                padding={mobile ? 'null' : '30px'}
+                maxWidth="700px"
+                minWidth="300px"
             >
-                <Text fontWeight="light">
+                <Text fontWeight="light" fontSize={mobile ? '16px' : '24px'}>
                     Crea mejores contactos profesionales de forma más fácil y comóda
                 </Text>
             </Box>
