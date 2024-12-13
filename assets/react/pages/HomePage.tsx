@@ -2,11 +2,13 @@ import React from 'react';
 import { Layout } from '../layout/Layout';
 import { Button, Grid, GridItem, Image, Text, useMediaQuery } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import Hero from '../layout/Hero';
 
 export function HomePage() {
     const [mobile] = useMediaQuery('(max-width: 720px)');
     return (
         <Layout>
+            <Hero />
             <Grid
                 templateColumns={mobile ? '1fr' : 'repeat(3, 1fr)'}
                 templateRows={mobile ? 'repeat(3, 100px) 1fr' : '80px 1fr'}

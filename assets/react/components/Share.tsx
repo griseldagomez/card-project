@@ -42,14 +42,7 @@ function Share({ isButtonEnabled, isOpen, onClose, cardUrl }: ShareProps) {
                     </AccordionButton>
                 </h2>
 
-                <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    pt={2}
-                    pb={2}
-                    margin="20px"
-                >
+                <Box display="flex" alignItems="center" justifyContent="center" pt={2} pb={2}>
                     <AccordionPanel className="button-container">
                         <Button
                             backgroundColor="rgb(92, 10, 92)"
@@ -70,11 +63,7 @@ function Share({ isButtonEnabled, isOpen, onClose, cardUrl }: ShareProps) {
                     <ModalBody>
                         <Text>
                             {cardUrl && (
-                                <Link
-                                    to={`/api/card/${cardUrl}`}
-                                    target="_blank"
-                                    className="card-url"
-                                >
+                                <Link to={`/card/${cardUrl}`} target="_blank" className="card-url">
                                     Pincha aqui para ver tu tarjeta
                                 </Link>
                             )}

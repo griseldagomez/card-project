@@ -43,7 +43,9 @@ function Design({ register, errors }: DesignProps) {
 
             <AccordionPanel>
                 <FormControl as="fieldset" isInvalid={errors.color ? true : false}>
-                    <FormLabel as="legend">Paleta de colores:</FormLabel>
+                    <FormLabel as="legend" textColor="gray">
+                        Elige el color:
+                    </FormLabel>
                     {/* 
                     Object.keys es una funcion que devuelve un array con todos los
                     miembros de un objeto.

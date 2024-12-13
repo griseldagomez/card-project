@@ -3,18 +3,79 @@
 * {
     padding: 0;
     margin: 0;
-    
 }
 
 #app {
-    height: 100dvh;
+    min-height: 100dvh;
 }
 
-
 body.chakra-ui-light {
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(to top, #9996cb, #ab99cc, #bb9dcd, #caa1cc, #d8a6cb);
-    margin: 0;
-    height: 100%;
-    
+  font-family: 'Roboto', sans-serif;
+  background-color: #9996cb;
+  // background-image: linear-gradient(to top, #9996cb, #ab99cc, #bb9dcd, #caa1cc, #d8a6cb);
+  margin: 0;
+  min-height: 100%;
+}
+
+  h2 {
+    color: #9996cb;
+    font-family: "Lilita One";
   }
+
+  .icon-form {
+    color: orange;
+    padding-right: 3px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divcol {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-name{
+    font-family:"Lilita One";
+    color:gray;
+    font-size:18px;
+    padding: 10px;
+  }
+  
+  .card-job{
+    font-family:"Lilita One";
+    color:gray;
+    font-size:18px;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .card-name .color1 {
+    .h1 {
+      color: #220330;
+    }
+    }
+   
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color:#9996cb;
+  padding: 10px;
+  align-items: center;
+}
+
+.icons .color1{
+  color: #220330;
+}
+
+.icons .color2{
+   color:#2b3c0d;
+}
+
+.icons .color3{
+  color: #165d5c;
+}

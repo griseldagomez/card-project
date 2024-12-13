@@ -13,22 +13,20 @@ function Card({ watch, projectImage }: CardProps) {
 
     return (
         <>
-            <div className={color ? 'nav-card ' + color : 'nav-card'}>
-                <h1 className="nav-card__title">{name || 'Maria'}</h1>
-                <h2 className="nav-card__sub-title">{job || 'Programadora'}</h2>
+            <div className={color ? 'card-name ' + color : 'card-job'}>
+                <h1 className="card-name">{name || 'Sara Gómez'}</h1>
+                <p className="car-job">{job || 'Programadora Web'}</p>
             </div>
 
             <Image
-                border="1px"
                 // boxSize="200px"
-                borderColor="gray"
                 marginTop="20px"
                 width="100%"
-                minHeight="200px"
+                minHeight="100px"
                 borderRadius="10px"
                 object-fit="contain"
-                src={projectImage ? projectImage : '#'}
-                alt="Rellena"
+                src={projectImage ? projectImage : '/react/images/perfil.jpg'}
+                alt="img"
             />
         </>
     );

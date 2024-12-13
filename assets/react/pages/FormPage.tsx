@@ -1,6 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { Layout } from '../layout/Layout';
-import { Grid, GridItem, useDisclosure } from '@chakra-ui/react';
+import { Box, Grid, GridItem, useDisclosure } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 import { Accordion } from '@chakra-ui/react';
@@ -10,6 +9,7 @@ import Icons from '../components/Icons';
 import Share from '../components/Share';
 import Formulary from '../components/Formulary';
 import { FormFields } from '../types/formFields';
+import { Layout } from '../layout/Layout';
 
 function FormPage() {
     const {
@@ -84,18 +84,19 @@ function FormPage() {
 
     return (
         <Layout>
-            <Grid
-                templateColumns="repeat(2, 1fr)"
-                gap="20px"
-                width="100%"
-                height="500px"
-                placeContent="center"
-                border="1px solid black"
-                margin="50px auto"
-            >
-                <GridItem colSpan={1}>
+            <Grid templateColumns="repeat(2, 1fr)" gap="20px" width="500" margin="0 auto">
+                <GridItem
+                    colSpan={1}
+                    backgroundColor="white"
+                    width="300px"
+                    border="1px solid white"
+                    borderRadius="3px"
+                    justifySelf="end"
+                    alignSelf="start"
+                    minHeight="300px"
+                >
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
-                        <Accordion defaultIndex={[0]} allowToggle width="300px" marginTop="30px">
+                        <Accordion defaultIndex={[0]} allowToggle>
                             <Design register={register} errors={errors} />
                             <Formulary
                                 register={register}
@@ -112,9 +113,16 @@ function FormPage() {
                         </Accordion>
                     </form>
                 </GridItem>
-                <GridItem colSpan={1}>
-                    <Card watch={watch} projectImage={projectImage} />
-                    <Icons watch={watch} />
+                <GridItem colSpan={1} width="250px">
+                    <Box
+                        border="2px solid white"
+                        borderRadius="20px"
+                        backgroundColor="beige"
+                        marginLeft="20px"
+                    >
+                        <Card watch={watch} projectImage={projectImage} />
+                        <Icons watch={watch} />
+                    </Box>
                 </GridItem>
             </Grid>
         </Layout>
