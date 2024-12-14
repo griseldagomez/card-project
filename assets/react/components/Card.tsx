@@ -13,16 +13,17 @@ function Card({ watch, projectImage }: CardProps) {
 
     return (
         <>
-            <div className={color ? 'card-name ' + color : 'card-job'}>
-                <h1 className="card-name">{name || 'Sara Gómez'}</h1>
-                <p className="car-job">{job || 'Programadora Web'}</p>
+            <div className="card-title">
+                {/* ?? se llama null coalescent operator: si color es null o undefined, pasa al otro lado */}
+                <h1 className={`card-name ${color ?? ''}`}>{name || 'Sara Gómez'}</h1>
+                <p className={`card-job ${color ?? ''}`}>{job || 'Programadora Web'}</p>
             </div>
 
             <Image
                 // boxSize="200px"
                 marginTop="20px"
                 width="100%"
-                minHeight="100px"
+                minHeight="200px"
                 borderRadius="10px"
                 object-fit="contain"
                 src={projectImage ? projectImage : '/react/images/perfil.jpg'}

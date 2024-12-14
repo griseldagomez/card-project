@@ -24,7 +24,7 @@ interface DesignProps {
 
 function Design({ register, errors }: DesignProps) {
     const colorData: Record<string, string[]> = {
-        color1: ['#220330', '#b68ec7', '#866096'],
+        color1: ['#450662', '#ac6cc7', '#866096'],
         color2: ['#2b3c0d', '#728e42', '#6f9331'],
         color3: ['#165d5c', ' #093e3e', '#069b99'],
     };

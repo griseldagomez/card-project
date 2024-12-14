@@ -4,6 +4,6 @@
  * This file will be included onto the page via the importmap() Twig function,
  * which should already be in your base.html.twig.
  */
-// import './bootstrap.js';
+import './bootstrap.js';
 import './dist/index.js';
 import './styles/app.css';

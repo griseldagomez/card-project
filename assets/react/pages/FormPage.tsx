@@ -90,7 +90,7 @@ function FormPage() {
                     backgroundColor="white"
                     width="300px"
                     border="1px solid white"
-                    borderRadius="3px"
+                    borderRadius="6px"
                     justifySelf="end"
                     alignSelf="start"
                     minHeight="300px"

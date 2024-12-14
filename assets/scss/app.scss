@@ -37,39 +37,41 @@ body.chakra-ui-light {
     height: 30px;
   }
 
-  .card-name{
+  .card-title {
+    padding: 8px;
+  }
+
+  .card-name {
     font-family:"Lilita One";
     color:gray;
     font-size:18px;
-    padding: 10px;
+
+    &.color1 {
+      color:#ac6cc7;
+    }
   }
   
-  .card-job{
+  .card-job {
     font-family:"Lilita One";
     color:gray;
     font-size:18px;
-    padding: 10px;
-    margin-left: 10px;
+
+    &.color1 {
+      color:#866096;
+    }
   }
-
-  .card-name .color1 {
-    .h1 {
-      color: #220330;
-    }
-    }
    
-
 .icons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   color:#9996cb;
-  padding: 10px;
+  padding: 8px;
   align-items: center;
 }
 
 .icons .color1{
-  color: #220330;
+  color:#450662;
 }
 
 .icons .color2{
