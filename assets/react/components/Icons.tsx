@@ -14,6 +14,8 @@ interface IconsProps {
 }
 
 function Icons({ color, email, tel, linkedin, github }: IconsProps) {
+    const regExp = /^https?:\/\//;
+
     return (
         <div className="icons">
             <div className={color ? 'icons ' + color : 'icons'}>
@@ -23,7 +25,9 @@ function Icons({ color, email, tel, linkedin, github }: IconsProps) {
             </div>
             <div className={color ? 'icons ' + color : 'icons'}>
                 <a
-                    href={linkedin ? `https://${linkedin}` : '#'}
+                    href={
+                        linkedin ? (linkedin.match(regExp) ? linkedin : `https://${linkedin}`) : '#'
+                    }
                     target="_blank"
                     title="linkedin"
                     rel="noreferrer"
@@ -45,7 +49,7 @@ function Icons({ color, email, tel, linkedin, github }: IconsProps) {
 
             <div className={color ? 'icons ' + color : 'icons'}>
                 <a
-                    href={github ? `https://${github}` : '#'}
+                    href={github ? (github.match(regExp) ? github : `https://${github}`) : '#'}
                     target="_blank"
                     title="github"
                     rel="noreferrer"

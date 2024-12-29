@@ -34,6 +34,8 @@ function FormPage() {
     const onSubmit = async (data: FieldValues) => {
         setIsButtonEnabled(false);
 
+        const regExp = /^https?:\/\//;
+
         try {
             const response = await fetch('/api/card', {
                 method: 'POST',
@@ -47,8 +49,10 @@ function FormPage() {
                     email: data.email,
                     photo: projectImage,
                     phone: data.tel,
-                    linkedinUrl: data.linkedin,
-                    githubUrl: data.github,
+                    linkedinUrl: data.linkedin.match(regExp)
+                        ? data.linkedin
+                        : `https://${data.linkedin}`,
+                    githubUrl: data.github.match(regExp) ? data.github : `https://${data.github}`,
                 }),
             });
 
