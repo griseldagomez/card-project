@@ -1,11 +1,10 @@
 import React, { ChangeEvent } from 'react';
-import { Box, Grid, GridItem, useDisclosure } from '@chakra-ui/react';
+import { Grid, GridItem, useDisclosure } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 import { Accordion } from '@chakra-ui/react';
 import Design from '../components/Design';
 import Card from '../components/Card';
-import Icons from '../components/Icons';
 import Share from '../components/Share';
 import Formulary from '../components/Formulary';
 import { FormFields } from '../types/formFields';
@@ -18,6 +17,16 @@ function FormPage() {
         formState: { errors },
         watch,
     } = useForm<FormFields>();
+
+    const [name, job, color, tel, email, github, linkedin] = watch([
+        'name',
+        'job',
+        'color',
+        'tel',
+        'email',
+        'github',
+        'linkedin',
+    ]);
 
     const [cardUrl, setCardUrl] = useState<string | null>(null);
     const [isButtonEnabled, setIsButtonEnabled] = useState(true);
@@ -114,15 +123,16 @@ function FormPage() {
                     </form>
                 </GridItem>
                 <GridItem colSpan={1} width="250px">
-                    <Box
-                        border="2px solid white"
-                        borderRadius="20px"
-                        backgroundColor="beige"
-                        marginLeft="20px"
-                    >
-                        <Card watch={watch} projectImage={projectImage} />
-                        <Icons watch={watch} />
-                    </Box>
+                    <Card
+                        name={name}
+                        job={job}
+                        color={color}
+                        projectImage={projectImage}
+                        tel={tel}
+                        email={email}
+                        github={github}
+                        linkedin={linkedin}
+                    />
                 </GridItem>
             </Grid>
         </Layout>

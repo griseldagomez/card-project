@@ -77,14 +77,7 @@ function Formulary({ register, errors, handleImage, projectImage }: FormularyPro
                         )}
                     </FormControl>
 
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        gap="5px"
-                        padding="10px"
-                        justifyContent="space-around"
-                        fontFamily="initial"
-                    >
+                    <Box display="flex" margin="10px" padding="5px">
                         <FormControl isInvalid={errors.file ? true : false} isRequired id="file">
                             <Button as="label" htmlFor="file">
                                 Añadir imagen
@@ -101,7 +94,9 @@ function Formulary({ register, errors, handleImage, projectImage }: FormularyPro
                                 <FormErrorMessage>Por favor, sube tu foto</FormErrorMessage>
                             )}
                         </FormControl>
-                        <div>{projectImage && <img src={projectImage} />}</div>
+                        <div className="container">
+                            {projectImage && <img src={projectImage} className="img" />}
+                        </div>
                     </Box>
 
                     <FormControl isInvalid={errors.tel ? true : false} isRequired id="tel">

@@ -1,35 +1,50 @@
 import React from 'react';
-import { Image } from '@chakra-ui/react';
-import { UseFormWatch } from 'react-hook-form';
-import { FormFields } from '../types/formFields';
+import { Image, Box } from '@chakra-ui/react';
+import Icons from '../components/Icons';
 
 interface CardProps {
-    watch: UseFormWatch<FormFields>;
+    name: string;
+    job: string;
+    color: string;
     projectImage: string;
+    tel: string;
+    github: string;
+    email: string;
+    linkedin: string;
 }
 
-function Card({ watch, projectImage }: CardProps) {
-    const [name, job, color] = watch(['name', 'job', 'color']);
-
+function Card({ name, job, color, projectImage, tel, email, github, linkedin }: CardProps) {
     return (
-        <>
+        <Box border="2px solid white" borderRadius="20px" backgroundColor="beige" marginLeft="20px">
             <div className="card-title">
                 {/* ?? se llama null coalescent operator: si color es null o undefined, pasa al otro lado */}
                 <h1 className={`card-name ${color ?? ''}`}>{name || 'Sara Gómez'}</h1>
                 <p className={`card-job ${color ?? ''}`}>{job || 'Programadora Web'}</p>
             </div>
 
-            <Image
-                // boxSize="200px"
+            <Box
+                display="flex"
                 marginTop="20px"
+                flex-direction="column"
+                justify-content="center"
                 width="100%"
-                minHeight="200px"
+                height="230px"
                 borderRadius="10px"
-                object-fit="contain"
-                src={projectImage ? projectImage : '/react/images/perfil.jpg'}
-                alt="img"
-            />
-        </>
+            >
+                <Image
+                    maxWidth="100%"
+                    maxHeight="100%"
+                    minHeight="200px"
+                    borderRadius="10px"
+                    object-fit="contain"
+                    margin="0 auto"
+                    src={projectImage ? projectImage : '/react/images/perfil.jpg'}
+                    alt="img"
+                />
+            </Box>
+
+            <Icons color={color} tel={tel} email={email} linkedin={linkedin} github={github} />
+        </Box>
     );
 }
 
