@@ -5,7 +5,7 @@ function Hero() {
     const [mobile] = useMediaQuery('(max-width: 720px)');
 
     return (
-        <Box >
+        <Box>
             <Box
                 display="inline"
                 textAlign="center"
