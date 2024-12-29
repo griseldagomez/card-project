@@ -26,6 +26,7 @@
 ###> symfony/asset-mapper ###
 /public/assets/
 /assets/vendor/
+/public/react/
 ###< symfony/asset-mapper ###
 
 ###> friendsofphp/php-cs-fixer ###

@@ -47,6 +47,11 @@ await build({
             target: './assets/fonts',
             copyWithFolder: false,
         }),
+        copy({
+            source: './assets/images',
+            target: './public/react',
+            copyWithFolder: true,
+        }),
         sassPlugin(),
     ],
 });

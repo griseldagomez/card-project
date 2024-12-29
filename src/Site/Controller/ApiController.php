@@ -77,7 +77,7 @@ class ApiController extends AbstractController
 
             return new JsonResponse([
                 'success' => true,
-                'insert-id' => $insertId,
+                'insert_id' => $insertId,
             ]);
         } catch (\Throwable $e) {
             return new JsonResponse([
