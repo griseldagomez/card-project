@@ -77,11 +77,11 @@ function FormPage() {
         }
     };
 
-    // debug
-    useEffect(() => {
-        setCardUrl('1');
-        onOpen();
-    }, []);
+    // // debug
+    // useEffect(() => {
+    //     setCardUrl('1');
+    //     onOpen();
+    // }, []);
 
     const [projectImage, setProjectImage] = useState('');
 
