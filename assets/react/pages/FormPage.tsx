@@ -103,15 +103,16 @@ function FormPage() {
                 gap={mobile ? '6' : '20px'}
                 width={mobile ? '300px' : '500px'}
                 margin="0 auto"
+                placeItems="center"
                 marginBottom={mobile ? '30px' : '0'}
                 padding={mobile ? '10px' : ''}
             >
                 <GridItem
                     colSpan={1}
                     backgroundColor="white"
-                    width="300px"
-                    justifySelf="end"
-                    alignSelf="start"
+                    width={mobile ? '250px' : '300px'}
+                    justifySelf={mobile ? 'center' : 'end'}
+                    alignSelf={mobile ? 'center' : 'start'}
                     minHeight="300px"
                 >
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -132,7 +133,7 @@ function FormPage() {
                         </Accordion>
                     </form>
                 </GridItem>
-                <GridItem colSpan={1} width="250px" placeSelf={mobile ? 'center' : ''}>
+                <GridItem colSpan={1} width="250px" marginRight={mobile ? '20px' : '0 auto'}>
                     <Card
                         name={name}
                         job={job}
