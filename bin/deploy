@@ -1,11 +1,11 @@
 #! /usr/bin/bash
 
-APP_ENV=prod && symfony composer install --no-dev
+symfony composer install --no-dev
 
 npm install --no-save
 
 npm run build
 
-APP_ENV=prod && symfony console asset-map:compile
+symfony console asset-map:compile
 
-APP_ENV=prod && symfony console cache:warmup
+symfony console cache:warmup
