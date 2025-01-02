@@ -1,9 +1,11 @@
 #! /usr/bin/bash
 
-composer install --no-dev
+symfony composer install --no-dev
 
-npm install --force
+npm install --no-save
 
 npm run build
 
-./bin/console cache:warmup
+symfony console asset-map:compile
+
+symfony console cache:warmup
