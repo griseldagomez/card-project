@@ -13,7 +13,7 @@ function Header() {
                     flexDirection={mobile ? 'column' : 'row'}
                     fontSize={mobile ? '30px' : '40px'}
                     margin="40px"
-                    textColor="black"
+                    textColor="beige"
                     fontFamily="Lilita One"
                 >
                     <Text textAlign="center" margin="0 30px 10px 0">

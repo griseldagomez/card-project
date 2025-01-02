@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Card from '../components/Card';
+import { Box } from '@chakra-ui/react';
 
 interface Card {
     colorScheme: string;
@@ -53,18 +54,39 @@ export default function CardPage() {
     return (
         <>
             {card && (
-                <div className="card">
-                    <Card
-                        color={card.colorScheme}
-                        name={card.name}
-                        job={card.job}
-                        email={card.email}
-                        tel={card.phone}
-                        projectImage={card.photo}
-                        github={card.githubUrl}
-                        linkedin={card.linkedinUrl}
-                    />
-                </div>
+                <>
+                    <div className="card">
+                        <Card
+                            color={card.colorScheme}
+                            name={card.name}
+                            job={card.job}
+                            email={card.email}
+                            tel={card.phone}
+                            projectImage={card.photo}
+                            github={card.githubUrl}
+                            linkedin={card.linkedinUrl}
+                        />
+                        <Box
+                            fontFamily="sife"
+                            fontSize="18px"
+                            padding="20px"
+                            margin="0 auto"
+                            // backgroundColor="#966096"
+                            borderRadius="20px"
+                            textDecoration="underline"
+                        >
+                            <div>
+                                <a
+                                    href="https://card-project.fotosgri.com"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    ¡Pincha aquí y crea tu propia tarjeta!
+                                </a>
+                            </div>
+                        </Box>
+                    </div>
+                </>
             )}
         </>
     );

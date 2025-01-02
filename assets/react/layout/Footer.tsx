@@ -8,7 +8,7 @@ function Footer() {
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            color="black"
+            color="blue.900"
             fontFamily="Lilita One"
             border="1px solid gray"
         >

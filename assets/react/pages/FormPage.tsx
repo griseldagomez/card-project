@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react';
-import { Grid, GridItem, useDisclosure } from '@chakra-ui/react';
+import { Grid, GridItem, useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
 import { Accordion } from '@chakra-ui/react';
@@ -11,6 +11,7 @@ import { FormFields } from '../types/formFields';
 import { Layout } from '../layout/Layout';
 
 function FormPage() {
+    const [mobile] = useMediaQuery('(max-width: 720px)');
     const {
         register,
         handleSubmit,
@@ -97,13 +98,18 @@ function FormPage() {
 
     return (
         <Layout>
-            <Grid templateColumns="repeat(2, 1fr)" gap="20px" width="500" margin="0 auto">
+            <Grid
+                templateColumns={mobile ? '1fr1' : 'repeat(2, 1fr)'}
+                gap={mobile ? '6' : '20px'}
+                width={mobile ? '300px' : '500px'}
+                margin="0 auto"
+                marginBottom={mobile ? '30px' : '0'}
+                padding={mobile ? '10px' : ''}
+            >
                 <GridItem
                     colSpan={1}
                     backgroundColor="white"
                     width="300px"
-                    border="1px solid white"
-                    borderRadius="6px"
                     justifySelf="end"
                     alignSelf="start"
                     minHeight="300px"
@@ -126,7 +132,7 @@ function FormPage() {
                         </Accordion>
                     </form>
                 </GridItem>
-                <GridItem colSpan={1} width="250px">
+                <GridItem colSpan={1} width="250px" placeSelf={mobile ? 'center' : ''}>
                     <Card
                         name={name}
                         job={job}
