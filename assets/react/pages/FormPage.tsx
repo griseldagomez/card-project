@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import { Grid, GridItem, useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import { useState } from 'react';
 import { FieldValues, useForm } from 'react-hook-form';
@@ -76,6 +76,12 @@ function FormPage() {
             setIsButtonEnabled(true);
         }
     };
+
+    // debug
+    useEffect(() => {
+        setCardUrl('1');
+        onOpen();
+    }, []);
 
     const [projectImage, setProjectImage] = useState('');
 

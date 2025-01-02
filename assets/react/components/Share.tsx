@@ -57,14 +57,20 @@ function Share({ isButtonEnabled, isOpen, onClose, cardUrl }: ShareProps) {
                 </Box>
             </AccordionItem>
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
-                <ModalContent>
-                    <ModalHeader>Tu tarjeta de visita se ha creado</ModalHeader>
+                <ModalContent color=" rgb(92, 10, 92)" padding="10px">
+                    <ModalHeader>Tu tarjeta se ha creado exitosamente</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Text>
+                        <Text
+                            fontFamily="roboto"
+                            fontWeight="bold"
+                            align="center"
+                            fontSize="18px"
+                            color="rgb(63, 14, 63)"
+                        >
                             {cardUrl && (
                                 <Link to={`/card/${cardUrl}`} target="_blank" className="card-url">
-                                    Pincha aqui para ver tu tarjeta
+                                    ¡Pincha aquí para verla!
                                 </Link>
                             )}
                         </Text>

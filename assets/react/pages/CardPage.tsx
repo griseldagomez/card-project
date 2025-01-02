@@ -67,8 +67,8 @@ export default function CardPage() {
                             linkedin={card.linkedinUrl}
                         />
                         <Box
-                            fontFamily="sife"
-                            fontSize="18px"
+                            fontFamily="roboto"
+                            fontSize="16px"
                             padding="20px"
                             margin="0 auto"
                             // backgroundColor="#966096"
